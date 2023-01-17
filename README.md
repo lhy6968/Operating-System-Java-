@@ -1,6 +1,8 @@
 # Operating-System-Java
-In this project, we used the nachos of Java to implement some functions of operating system.
-(1) multip threads and multiple processes
-We achieved mutiple threads and mutiple processes with the help of nachos. In the same time, we improved some of the features of multithreading like lock, condition variable and time stamp. With our efforts, our program can realize many functions such as data sharing between threads, thread private data protection and data exchange between processes.
-(2) file system
-We 
+In this project, I used the nachos of Java to implement some functions of operating system.
+# (1) Multip Threads and Multiple Processes
+I achieved mutiple threads and mutiple processes with the help of nachos. In the same time, I improved some of the features of multithreading like lock, condition variable and time stamp. Finally, my program can realize many functions such as data sharing between threads, thread private data protection and data exchange between processes.
+# (2) File System
+I designed and implemented a simple file system. My file system includes many basic functions of the Linux file system such as file creation, reading, deleting, modifying, etc. At the same time, nachos helped me connect my program to the underlying Linux code, allowing me to do much of my program's work directly from the linux command line. For example: when we enter the "mv" command at the terminal, our program can achieve the same function as linux "mv" command (file move or file rename).
+# (3) Demand Paging
+I made some improvements to our file system based on the second step. First, I implemented the demand paging. Instead of assigning physical pages to all files and activating them when the file system is initialized, I used dynamic allocation, which meant that a file was activated and the corresponding number of physical pages were allocated to it when it was actually used. Second, I implemented demand paged virtual memory with page replacement. That is, not only do I delay initializing pages, but now I delay the allocation of physical page frames until a process actually references a virtual page that is not already loaded in memory, which means I implement swap file, page replacement, page pinning, an inverted page table, etc.
